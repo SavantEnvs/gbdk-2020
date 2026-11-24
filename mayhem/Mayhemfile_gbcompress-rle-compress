@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: gbcompress-rle-compress
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gbcompress-rle-compress/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/gbcompress --alg=rle @@ out.bin
+    afl: true
+    timeout: 5

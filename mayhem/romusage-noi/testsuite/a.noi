@@ -1,0 +1,12 @@
+DEF s__HOME 0x200
+DEF l__HOME 0x100
+DEF s__CODE 0x300
+DEF l__CODE 0x1200
+DEF s__CODE_1 0x14000
+DEF l__CODE_1 0x800
+DEF s__DATA 0xC0A0
+DEF l__DATA 0x40
+DEF _main 0x200
+DEF ___bank_level1 0x1
+DEF b_level1 0x1
+DEF _level1 0x14000

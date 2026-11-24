@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: romusage-ihx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/romusage-ihx/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/romusage-staged .ihx @@ @IN -g
+    afl: true
+    timeout: 5

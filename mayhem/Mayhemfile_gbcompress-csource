@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: gbcompress-csource
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gbcompress-csource/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/gbcompress --cin --cout --varname=v @@ out.c
+    afl: true
+    timeout: 5

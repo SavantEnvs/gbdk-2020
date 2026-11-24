@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: makecom
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/makecom/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/makecom-staged .noi @@ @IN out.com
+    afl: true
+    timeout: 5

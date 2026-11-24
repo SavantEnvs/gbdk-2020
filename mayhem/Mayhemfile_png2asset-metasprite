@@ -1,0 +1,10 @@
+project: savantenvs/gbdk-2020
+target: png2asset-metasprite
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/png2asset-metasprite/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/png2asset @@ -c out.c -spr8x16 -sw 16 -sh 16 -px 0 -py 0 -pw 16 -ph 16
+    afl: true
+    timeout: 5
+    filepath: input.png

@@ -1,0 +1,10 @@
+project: savantenvs/gbdk-2020
+target: png2asset
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/png2asset/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/png2asset @@ -map -o out.c
+    afl: true
+    timeout: 5
+    filepath: input.png

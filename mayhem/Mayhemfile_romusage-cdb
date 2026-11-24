@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: romusage-cdb
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/romusage-cdb/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/romusage-staged .cdb @@ @IN -a
+    afl: true
+    timeout: 5

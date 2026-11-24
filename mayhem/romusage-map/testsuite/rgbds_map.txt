@@ -1,0 +1,7 @@
+ROM0 bank #0:
+  SECTION: $0000-$00ff ($0100 bytes) ["Header"]
+  SECTION: $0150-$0300 ($01b1 bytes) ["Main"]
+ROMX bank #1:
+  SECTION: $4000-$4fff ($1000 bytes) ["Level"]
+WRAM0 bank #0:
+  SECTION: $c000-$c0ff ($0100 bytes) ["Vars"]

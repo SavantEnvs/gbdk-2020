@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: romusage-map
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/romusage-map/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/romusage-staged .map @@ @IN -a -g -B
+    afl: true
+    timeout: 5

@@ -1,0 +1,9 @@
+M:main
+F:G$main$0_0$0({2}DF,SV:S),C,0,0,0,0,0
+S:G$counter$0_0$0({1}SC:U),E,0,0
+S:G$table$0_0$0({16}DA16d,SC:U),D,0,0
+L:G$main$0_0$0:200
+L:XG$main$0_0$0:2FF
+L:G$counter$0_0$0:C0A0
+L:G$table$0_0$0:14000
+L:XG$table$0_0$0:1400F

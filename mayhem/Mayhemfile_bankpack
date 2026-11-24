@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: bankpack
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bankpack/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/bankpack-staged .o @@ -mbc=5 -ext=.rel -path=./ -v @IN
+    afl: true
+    timeout: 5

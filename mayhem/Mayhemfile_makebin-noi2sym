@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: makebin-noi2sym
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/makebin-noi2sym/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/makebin-staged .noi @@ -Z -yS @IN out.gb
+    afl: true
+    timeout: 5

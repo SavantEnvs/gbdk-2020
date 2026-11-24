@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: makebin
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/makebin/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/makebin -Z -yo A @@ out.gb
+    afl: true
+    timeout: 5

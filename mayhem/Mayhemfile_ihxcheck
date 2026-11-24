@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: ihxcheck
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ihxcheck/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/ihxcheck-staged .ihx @@ @IN
+    afl: true
+    timeout: 5

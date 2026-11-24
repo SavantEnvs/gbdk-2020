@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: gbcompress-zx0-decompress
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gbcompress-zx0-decompress/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/zx0_decompress_fuzzer
+    libfuzzer: true
+    timeout: 5

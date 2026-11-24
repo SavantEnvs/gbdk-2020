@@ -1,0 +1,9 @@
+project: savantenvs/gbdk-2020
+target: gbcompress-decompress
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gbcompress-decompress/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz/gbcompress -d @@ out.bin
+    afl: true
+    timeout: 5
